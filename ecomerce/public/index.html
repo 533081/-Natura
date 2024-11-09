@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"/>   
+    <title>React App</title>
+    <title>Navbar y Carrito de Compras</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css " rel="stylesheet"
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Tu Marca</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Colección</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="toggleCart()">Carrito <span id="cart-count" class="badge badge-light">0</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Carrito de Compras -->
+  <div id="cart" class="cart d-none bg-light p-3">
+    <h4>Carrito de Compras</h4>
+    <ul id="cart-items" class="list-group mb-3"></ul>
+    <p>Total: $<span id="cart-total">0.00</span></p>
+    <button onclick="clearCart()" class="btn btn-danger">Vaciar Carrito</button>
+  </div>
+  <!-- Sección de Productos -->
+<div class="container my-5">
+    <div class="row">
+      <!-- Producto 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="/ecomerce/src/assets/blanca.jpg" class="card-img-top" alt="Producto 1">
+          <div class="card-body">
+            <h5 class="card-title">Remera Oversize</h5>
+            <p class="card-text">Remera Oversize.</p>
+            <p class="card-text font-weight-bold">$29.99</p>
+            <button onclick="addToCart('Remera Oversize', 29.99)" class="btn btn-primary">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Producto 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="/ecomerce/src/assets/remerablancadetalle.jpg" class="card-img-top" alt="Producto 2">
+          <div class="card-body">
+            <h5 class="card-title">remera blanca detalle</h5>
+            <p class="card-text">remera con detalle.</p>
+            <p class="card-text font-weight-bold">$49.99</p>
+            <button onclick="addToCart('Remera Con Detalle', 49.99)" class="btn btn-primary">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Producto 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="/ecomerce/src/assets/buzoblanco.jpg" class="card-img-top" alt="Producto 3">
+          <div class="card-body">
+            <h5 class="card-title">buzo blanco clasico</h5>
+            <p class="card-text">buzo blanco</p>
+            <p class="card-text font-weight-bold">$39.99</p>
+            <button onclick="addToCart('Buzo Blanco', 39.99)" class="btn btn-primary">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+ 
+  </body>
+</html>

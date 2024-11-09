@@ -1,0 +1,25 @@
+.cart {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+  }
+  .card {
+    height: 100%; /* Para que cada tarjeta ocupe toda la altura disponible */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-img-top {
+    height: 400px; /* Define una altura fija para las imágenes */
+    object-fit: cover; /* Asegura que las imágenes mantengan su proporción y se ajusten al área */
+  }
+  
+  .card-body {
+    flex-grow: 1; /* Permite que el cuerpo de la tarjeta se expanda uniformemente */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el contenido del card-body */
+  }
